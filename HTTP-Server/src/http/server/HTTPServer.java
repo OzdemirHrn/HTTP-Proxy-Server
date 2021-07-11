@@ -13,7 +13,10 @@ import java.util.concurrent.Executors;
  * @author Harun ÖZDEMİR 150116043
  */
 public class HTTPServer {
-
+    /*
+    Please write the path of Proxy-Server and HTTP-Server directories that I sent in zip file.
+ */
+    static String path="C:/Users/hrnoz/Desktop/";
     private static ExecutorService service = Executors.newFixedThreadPool(500);
     private static int portNumber = 8080;
 
@@ -140,13 +143,13 @@ final class ServerOperations implements Runnable {
         /*
 
          */
-        String FILE_TO_SEND = "C:/Users/hrnoz/Desktop/HTTP-Server/" + size + ".txt";
-        String badRequest_gt20000 = "C:/Users/hrnoz/Desktop/HTTP-Server/gt-20000.txt";
-        String badRequest_lt100 = "C:/Users/hrnoz/Desktop/HTTP-Server/lt-100.txt";
-        String badRequest_nan = "C:/Users/hrnoz/Desktop/HTTP-Server/nan.txt";
-        String badRequest_notGet = "C:/Users/hrnoz/Desktop/HTTP-Server/not-get.txt";
-        String badRequest_notImp = "C:/Users/hrnoz/Desktop/HTTP-Server/not-imp.txt";
-        String emptyFile = "C:/Users/hrnoz/Desktop/HTTP-Server/empty.txt";
+        String FILE_TO_SEND = HTTPServer.path+"HTTP-Server/" + size + ".txt";
+        String badRequest_gt20000 = HTTPServer.path+"HTTP-Server/gt-20000.txt";
+        String badRequest_lt100 = HTTPServer.path+"HTTP-Server/lt-100.txt";
+        String badRequest_nan = HTTPServer.path+"HTTP-Server/nan.txt";
+        String badRequest_notGet = HTTPServer.path+"HTTP-Server/not-get.txt";
+        String badRequest_notImp = HTTPServer.path+"HTTP-Server/not-imp.txt";
+        String emptyFile = HTTPServer.path+"HTTP-Server/empty.txt";
         File file = null;
         FileWriter filewriter = null;
 
